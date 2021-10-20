@@ -50,6 +50,7 @@ const Youtube = () => {
             <iframe
               width='424'
               height='267'
+              className='iframe'
               src={`https://www.youtube.com/embed/${ss.id.videoId}`}
               title='YouTube video player'
               frameborder='0'

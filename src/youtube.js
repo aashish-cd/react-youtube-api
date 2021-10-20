@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import style from './youtube.module.scss';
 const url = 'https://www.googleapis.com/youtube/v3/search';
@@ -25,11 +25,24 @@ const Youtube = () => {
     <section>
       <div className='form'>
         <input
+          id='query'
+          name='query'
           type='text'
+          onSubmit={fetchData}
           value={query}
+          placeholder='search your favourite song'
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button onClick={fetchData}>Search</button>
+        <input
+          type='number'
+          name='number'
+          id='number'
+          value={noOfResults}
+          onChange={(e) => setNoOfResults(e.target.value)}
+        />
+        <button target='query' onClick={fetchData}>
+          Search
+        </button>
       </div>
       <div className={style.container}>
         {data.map((ss) => (

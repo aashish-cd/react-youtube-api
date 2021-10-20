@@ -48,8 +48,8 @@ const Youtube = () => {
         {data.map((ss) => (
           <div>
             <iframe
-              width='949'
-              height='534'
+              width='424'
+              height='267'
               src={`https://www.youtube.com/embed/${ss.id.videoId}`}
               title='YouTube video player'
               frameborder='0'

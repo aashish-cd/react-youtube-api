@@ -1,4 +1,17 @@
 .container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-column-gap: 5px;
+  margin-top: 20px;
+}
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: 100%;
+  }
 }
